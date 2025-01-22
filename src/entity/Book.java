@@ -2,7 +2,7 @@ package entity;
 
 import java.time.LocalDate;
 
-public abstract class Book {
+public class Book {
     private Long id;
     private String name;
     private Author author;
@@ -15,8 +15,7 @@ public abstract class Book {
     private User whichUser;
 
 
-    public Book(Long id, String name, Author author, Publisher publisher, Category category,
-                int edition, LocalDate publicationDate, Double price, Boolean isAvailable, User whichUser) {
+    public Book(Long id, String name, Author author, Publisher publisher, Category category, int edition, LocalDate publicationDate, Double price, Boolean isAvailable, User whichUser) {
         this.id = id;
         this.name = name;
         this.author = author;
