@@ -5,19 +5,35 @@ import java.util.List;
 public class User extends People{
 
     private int credit;
-    private List<Book> receivedBooks;
+    private List<Integer> receivedBooksId;
 
-    public User(Long id, String name, int credit, List<Book> receivedBooks) {
+    public User(Integer id, String name, int credit, List<Integer> receivedBooksId) {
         super(id, name);
         this.credit = credit;
-        this.receivedBooks = receivedBooks;
+        this.receivedBooksId = receivedBooksId;
     }
 
     public int getCredit() {
         return credit;
     }
 
-    public List<Book> getReceivedBooks() {
-        return receivedBooks;
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
+    public List<Integer> getReceivedBooksId() {
+        return receivedBooksId;
+    }
+
+    public void setReceivedBooksId(List<Integer> receivedBooksId) {
+        this.receivedBooksId = receivedBooksId;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "credit=" + credit +
+                ", receivedBooksId=" + receivedBooksId +
+                '}';
     }
 }

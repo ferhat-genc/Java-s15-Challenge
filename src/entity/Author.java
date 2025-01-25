@@ -1,22 +1,41 @@
 package entity;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Author extends People{
-    private List<Book> books;
-    private List<Publisher> publishers;
 
-    public Author(Long id, String name, List<Book> books, List<Publisher> publishers) {
+    private List<Integer> booksId;
+    private List<Integer> publishersId;
+
+    public Author(Integer id, String name, List<Integer> booksId, List<Integer> publishersId) {
         super(id, name);
-        this.books = books;
-        this.publishers = publishers;
+        this.booksId = booksId;
+        this.publishersId = publishersId;
     }
 
-    public List<Book> getBooks() {
-        return books;
+    public List<Integer> getBooksId() {
+        return booksId;
     }
 
-    public List<Publisher> getPublishers() {
-        return publishers;
+    public void setBooksId(List<Integer> booksId) {
+        this.booksId = booksId;
+    }
+
+    public List<Integer> getPublishersId() {
+        return publishersId;
+    }
+
+    public void setPublishersId(List<Integer> publishersId) {
+        this.publishersId = publishersId;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "booksId=" + booksId +
+                ", publishersId=" + publishersId +
+                '}';
     }
 }
+
