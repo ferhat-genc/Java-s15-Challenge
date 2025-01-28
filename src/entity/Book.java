@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.Year;
 import java.util.Objects;
 
+
 public class Book {
     private Integer id;
     private String name;
@@ -15,6 +16,9 @@ public class Book {
     private Double price;
     private Boolean isAvailable;
     private Integer whichUserId;
+
+    public Book() {
+    }
 
     public Book(Integer id, String name, Integer authorId, Integer publisherId, Integer categoryId, int edition, Year publicationDate, Double price, Boolean isAvailable, Integer whichUserId) {
         this.id = id;

@@ -1,12 +1,14 @@
 package controller;
 
-import java.util.List;
+import entity.Book;
+
+import java.util.Map;
 
 public interface ICrudMethods {
-    void create();
-    Object read();
-    void delete();
-    Object update();
-    Object search();
-    List<Object> all();
+    Book create();
+    Map delete();
+    Map update();
+    Map read();
+
+
 }
